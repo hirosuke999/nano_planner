@@ -19,7 +19,7 @@ defmodule NanoPlanner.Mixfile do
   def application do
     [mod: {NanoPlanner, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :tzdata]]
   end
 
   # Specifies which paths to compile per environment.
@@ -38,7 +38,10 @@ defmodule NanoPlanner.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:ecto, "~> 2.1.6"},
      {:gettext, "~> 0.14.1"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:timex, "3.1.24"},
+     {:timex_ecto, "~> 3.1.0"},
+     ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
